@@ -47,6 +47,7 @@ var track = {
 };
 
 alert("Let's race!");
+
 speedResponse = prompt("What kind of car will you drive?");
 speedResponseLowerCase = speedResponse.toLowerCase();
 for (var i = 0; i < speedResponse.length; i++) {
@@ -60,14 +61,12 @@ if (userSpeed === 0 || isNaN(userSpeed)) {
   userSpeed = 0.1;
   speedResponse = "Walking";
 }
-
 skillResponse = prompt("How many accidents have you been in?");
 userSkill = parseInt(skillResponse, 10);
 userSkill = 10 - userSkill;
 if (isNaN(userSkill) || userSkill <= 0) {
   userSkill = 1;
 }
-
 var user = new Racer("You", userSpeed, userSkill, speedResponse);
 
 computerSpeed = Math.round(Math.random() * 9)/10;
